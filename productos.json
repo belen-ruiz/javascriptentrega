@@ -1,0 +1,45 @@
+
+
+
+[
+    {"id": 1,
+    "cat": "Remera London" , 
+    "talle": "S", 
+    "gen": "Unisex", 
+    "precio": 1599}, 
+
+
+    {"id": 2,
+    "cat": "Remera Paris", 
+    "talle": "M", 
+    "gen": "Unisex", 
+    "precio": 1899},
+
+
+    {"id": 3,
+    "cat": "Pantalon Buenos Aires", 
+    "talle": "S", 
+    "gen": "Unisex", 
+    "precio": 2899},
+
+    {"id": 4,
+    "cat": "Pantalon Berlin", 
+    "talle": "L", 
+    "gen": "Nino", 
+    "precio": 1799},
+    
+    
+    {"id": 5,
+    "cat": "Buzo Amsterdam", 
+    "talle": "S", 
+    "gen": "Unisex", 
+    "precio": 3899},
+    
+    
+    {"id": 6,
+    "cat": "Buzo Rome", 
+    "talle": "XL", 
+    "gen": "Nina" , 
+    "precio": 5299}
+]
+

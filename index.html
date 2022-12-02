@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Kidz Clothing. Catalogo de productos temporada 2022 verano invierno"
+    />
+    <meta
+      name="keywords"
+      content="Bebes, Verano, Nenas, Nenes, Remeras, Pantalones, Shorts, Camperas, Vestidos, Pijamas, tienda online, shop, compras"
+    />
+
+    <!-- Iconos-->
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- tostify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- css animated -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+   
+
+    <!-- fuente 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"/>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Kidz - Productos</title>
+    
+</head>
+<body id="bodyProductos">
+  <!-- header -->
+  <header>
+    <!-- logo -->
+    <div class="logo">
+        <p class="logoo">finalJava<span>.</span></p>
+    </div>
+
+    <!-- log in -->
+    <div class="sideIcons">
+        <div class="buscador">
+          <div id="desplegable">
+            <input id="buscador" class="" placeholder="Encuentre su producto" aria-label="Search">
+            <button id="btnBuscar" class="boton">Buscar</button>  
+          </div>
+          <i class="bi bi-search" id="botonLupa"></i>
+        </div>
+        <!-- logo crear cuenta -->
+        <div id="logoLogin" class="login logoLogin">
+          <a id="btnLogin"
+          data-toggle="login"
+          data-target="#idlogin"
+          class="btn">
+              <i class="bi bi-person-circle"></i>
+          </a>
+        </div>
+    </div>
+  </header>
+
+
+  <!-- main -->
+
+    <!-- seccion productos -->
+    <section id="catalogo" class="catalogo">
+
+      <div class="cargandoCatalogo text-center m-2" >
+        <h5 id="loaderTexto">Cargando productos</h5>
+        <div id="loader">
+          <div class="spinner-grow text-success" role="status">
+          <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+
+    
+      <div id="btnOrder" class=" btnCatalogo"> 
+        <p>Ordenar: </p>
+
+        <ul id="selectOrden">
+          <li id="ordenMayor">Mayor a menor $</li>
+          <li id="ordenMenor">Menor a mayor $</li>
+          <li id="ordenAlf">Alfabeticamente</li>
+        </ul>
+      </div>
+
+      <div id="sectionProductos">
+          <div id="filtros">
+              <div class="filtroBox filtrosCat">
+                <p>Categorias:</p>
+
+                <form id="identificadores" class="catCheckbox">
+                    <div class="cat cat-1">
+                        <input name="identificador" value="remera" id="remeras" type="radio" >
+                        <label for="remeras">Remeras</label>
+                    </div>
+
+                    <div id="pantalones" class="cat cat-1">
+                      <input name="identificador" value="pantalon"  type="radio">
+                      <label for="pantalones">Pantalones</label>
+                    </div>
+
+                    <div class="cat cat-1">
+                      <input name="identificador" value="buzo" id="buzos" type="radio">
+                      <label for="buzos">Buzos</label>
+                    </div>
+
+                    <div class="cat cat-1">
+                      <input name="identificador" value="Unisex" id="Unisex" type="radio">
+                      <label for="genero-uni">Unisex</label>
+                    </div>
+
+                    <div class="cat cat-1">
+                      <input name="identificador" value="nino" id="ninio" type="radio">
+                      <label for="genero-nino">Niños</label>
+                    </div>
+
+                    <div class="cat cat-1">
+                      <input name="identificador" value="nina" id="ninia" type="radio">
+                      <label for="genero-nina">Niñas</label>
+                    </div>
+                    
+                    <input id="botonAplicar" type="button" value="Aplicar">
+
+                </form>
+              </div>
+
+
+              <button type="text" id="btnBorrarFiltros" class="boton btn-warning" >Borrar filtro</button>
+                
+          </div>
+
+          <div id="productos" class="productos"> 
+          </div>        
+      </div>
+
+    </section>  
+
+    <div id="btnCatalogo" class=" btnCatalogo">
+      <button type="text" id="btnVer" class="boton btn-warning">Ver catalogo</button>
+
+      <button type="text" id="btnOcultar" class=" btn-warning">Ocultar catalogo</button>
+</div>
+
+
+    <!--modal carrito-->
+    <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
+            <button type="button" class="boton btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+            
+            </div>
+            <div class="row ml-ato">
+            <p id="precioTotal"></p>
+            </div>
+            <div class="modal-footer">
+            
+            
+            <button type="button" class=" boton btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" data-bs-dismiss="modal" class="boton" id="botonFinalizarCompra">Finalizar Compra</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- btnCarrito -->
+    <div id="divBotonCarrito">
+        <a id="botonCarrito" data-bs-toggle="modal" data-bs-target="#idModal" class="btn"
+        ><i class="fas fa-shopping-cart fa-1x"> </i></a>
+
+        <div id="carritoNumber" class="">
+        </div>
+    </div>
+
+
+
+    <!-- modal crear cuenta -->
+
+    <section id="contenedorContactModal">
+      <div id="contactModal">
+        <div class="sign-in-form" id="login-body">
+            <span id="btnCloseLogin">&times;</span>
+            <div class="titulo">
+                Crear Cuenta
+                
+            </div>
+
+            <div class="redes">
+                <i class="bi bi-google"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-twitch"></i>
+            </div>
+
+            <div class="registration">
+                o utiliza tu direccion de correo para registrarte
+            </div>
+
+            <div class="form">
+                <input id="nombreInputCuenta" type="text" value="Ingrese su nombre">
+                <input id="emailInputCuenta" type="email" value="Ingrese su E-mail">
+                <input id="passwordInputCuenta" type="password" value="contraseña">
+            </div>
+
+            <div class="data">
+                <div class="remember">
+                    <input type="checkbox" name="" id="">
+                    <label for="">Remember me</label>
+                </div>
+
+                <label class="forgot" for="">Forgot Password?</label>
+            </div>
+
+            <div class="botones">
+                <input id="btnEnviarDatos" class="sign-up" type="button" value="Sign Up">
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- mensajes -->
+
+    <section id="messages" class="p-5">
+        <img src="img/banner-04.jpg" alt="img banner" srcset="">
+        
+        <div class="formulario" >
+            <h2>¿Queres contactarte con nosotros y recibir novedades?</h2>
+
+            <h3>Deja aquí tu mensaje</h3>
+            
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre
+                    </label>
+                    <input type="text" class="form-control" id="nombreInput" aria-describedby="nombre">
+                </div>
+
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellidoInput" aria-describedby="apellido">
+                </div>
+
+                <div class="mb-3">
+                    <label for="mail" class="form-label">Dirección de correo</label>
+                    <input type="text" class="form-control" id="mailInput" aria-describedby="mail">
+                </div>
+
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <input type="text" class="form-control  pb-5" id="mensajeInput" aria-describedby="mensaje">
+                </div>
+
+                <button data-bs-dismiss="login" type="text" id="sendBtn" class="boton btn-success">Enviar Mensaje</button>
+            </form>
+        </div>  
+    </section>
+
+    <footer>
+      <a href="#"><h3>Subir ^</h3></a>
+      <h4>Todos los derechos reservados - Noviembre 2022</h4>
+      <h5>Desarrollado por M Belén Ruiz Gonzalez para JAVASCRIPT CODERHOUSE</h5>
+    </footer>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+    <!-- tostify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- js -->
+
+
+    
+
+  <script src="js/class.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

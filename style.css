@@ -1,0 +1,486 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+
+}
+
+
+:root{
+    --color-main: #dd517e;
+}
+
+header{
+    display: flex;
+    top: 0;
+    position: sticky;
+    width: auto;
+    height: 15vh;
+    background-color: rgba(255, 255, 255, 0.932);
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    z-index: 1;
+    
+}
+
+header .logo .logoo{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    font-weight:bolder;
+    padding-bottom: 1rem;
+
+}
+
+header .logo .logoo span{
+    color: #dd517e;
+    font-size: 4rem;
+}
+
+header .sideIcons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .sideIcons .buscador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .sideIcons .buscador #desplegable{
+  display: none;
+  margin: 2rem;
+}
+
+header .sideIcons .buscador input{
+    font-size: 1rem;
+    border-radius: 10px;
+    border:1px solid #aaa;
+}
+
+header .sideIcons .buscador i{
+  color: var(--color-main);
+  height: 35px;
+  width: 35px;
+  border: 2px solid #dd517e;
+  font-size: 1rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 40% 40%;
+  cursor: pointer;
+}
+
+header .sideIcons .buscador i:hover{
+  background-color: #dd517e;
+  color: white;
+}
+
+header .sideIcons .login{
+    padding: 1rem;
+   
+}
+
+header .sideIcons .login i{
+    font-size: 2rem;
+    color: var(--color-main);
+}
+
+.btn{
+ border: none;
+}
+
+.boton{
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  color: #dd517e;
+  background-color: rgb(255, 255, 255);
+}
+
+  /* GALERIA */
+
+
+
+#catalogo{
+    width: 100%;
+    padding: var(--color-main);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 241, 241);
+   
+  } 
+  
+  #catalogo #sectionProductos{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  #catalogo #sectionProductos #filtros{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  #catalogo #sectionProductos #filtros .filtroBox{
+    width: max-content;
+    padding: 2rem;
+    background-color: #dd517e;
+  }
+
+
+  #catalogo #sectionProductos #filtros #botonAplicar{
+    background-color: white;
+    padding: 0.7rem 1rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    border: none;
+  }
+
+  #catalogo #sectionProductos #filtros #botonAplicar:hover{
+    border: 2px solid white;
+    background-color:#dd517e;
+    color: white;
+  }
+
+  #catalogo #sectionProductos #filtros #btnBorrarFiltros{
+    display: none;
+    margin-top:2rem;
+  }
+
+  #catalogo #sectionProductos .productos{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  
+  #catalogo #sectionProductos .productos .productoCard{
+    padding: 1rem;
+    position: relative;
+  }
+  
+  #catalogo #sectionProductos .productos .productoCard .card-body .card-title{
+    font-size: 1rem;
+    color: var(--color-main);
+  }
+  
+  #catalogo #sectionProductos .productos .productoCard .card-body .gen{
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  
+  }
+  
+  #catalogo #sectionProductos .productos .productoCard .card-body .talles fieldset .radios{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+  #catalogo #sectionProductos .productos .productoCard .card-body .talles fieldset .radios div{
+    padding-right: 1rem;
+  }
+  
+  
+  #catalogo #sectionProductos .productos .productoCard .card-body .talles fieldset legend{
+    font-size: 0.8rem;
+  }
+  
+  #catalogo #sectionProductos .productos .productoCard .precio{
+    color:var(--color-main);
+    font-size: 1rem;
+  
+  }
+  
+  #catalogo #sectionProductos .productos .productoCard .btnComprar{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: var(--color-main);
+    border: 2px solid var(--color-main);
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  #catalogo #sectionProductos .productos .productoCard .btnComprar:hover{
+    background-color: var(--color-main);
+    color: white;
+  }
+  
+  
+  /* modal */
+  .modal-body .card-body{
+    display: flex;
+    height: 5rem;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-body .card-body img{
+    width: 10%;
+  }
+  .modal-body .card-body .card-title{
+    font-size: 1rem;
+  }
+  .modal-body .card-body .card-text{
+    color: var(--color-main);
+    padding-bottom: none;
+  }
+  
+  #precioTotal{
+    padding-left: 2rem;
+  }
+  
+  #precioTotal span{
+    color: var(--color-main);
+  }
+  
+  #botonFinalizarCompra{
+    background-color: #dd517e;
+    color: white;
+  }
+
+  /* sing up */
+  
+  
+  #contactModal{
+    display: none;
+    position: fixed;
+    z-index:1;
+    left: 30% ;
+    top: 5%;
+  }
+  #contactModal .sign-in-form{
+    background-color: rgb(237, 237, 237);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    
+  }
+  #contactModal .sign-in-form .titulo{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--color-main);
+    align-self: center;
+  }
+  #contactModal .sign-in-form .redes{
+    width: 100%;
+    display: flex;
+    font-size: 1rem;
+    padding: 1.6rem;
+    justify-content: space-evenly;
+  }
+  #contactModal .sign-in-form .redes .bi{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.4rem;
+    cursor: pointer;
+  }
+  #contactModal .sign-in-form .redes .bi:hover{
+    border: 1px solid var(--color-main);
+    color: var(--color-main);
+  
+    transition: all 0.5s ease-out;
+    transform: scale(1.3);
+  }
+  #contactModal .sign-in-form .registration{
+    font-size: 0.7rem;
+    align-self: center;
+  }
+  #contactModal .sign-in-form .form{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+  }
+  #contactModal .sign-in-form .form input{
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: rgb(216, 210, 210);
+    color: rgb(128, 124, 124);
+    font-size: 0.7rem;
+    border: 1px solid rgb(128, 124, 124);
+  }
+  #contactModal .sign-in-form .data{
+    display: flex;
+    font-size: 0.6rem;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #contactModal .sign-in-form .data .forgot{
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--color-main);
+  }
+  #contactModal .sign-in-form .data .forgot:hover{
+    color: black;
+  }
+  #contactModal .sign-in-form .botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #contactModal .sign-in-form .botones input{
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #contactModal .sign-in-form .botones input:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  #contactModal .sign-in-form .botones .sign-up{
+    background-color: var(--color-main);
+    border: none;
+    color: whitesmoke;
+  }
+  #contactModal .sign-in-form .botones .sign-in{
+    background-color: whitesmoke;
+    border: 1px solid var(--color-main);
+    color: var(--color-main);
+  }
+  
+  #contactModal div #btnCloseLogin {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  #contactModal div #btnCloseLogin:hover,
+  #contactModal div #btnCloseLogin:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  
+
+  #bodyProductos #divBotonCarrito{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem; 
+    background-color: var(--color-main);
+    border-radius: 10px;
+  }
+
+  #bodyProductos #divBotonCarrito #botonCarrito{
+    font-size: 2rem;
+    color: white;
+    position: relative;
+  }
+
+
+  #bodyProductos #divBotonCarrito #carritoNumber{
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    padding-left: 8px;
+    background-color: #e38d34;
+    color: white;
+  }
+
+  #bodyProductos #btnOrder{
+    padding-left: 5rem;
+    display: flex;
+  }
+
+  #bodyProductos #btnOrder #selectOrden{
+    display: flex;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  #bodyProductos #btnOrder #selectOrden li{
+    list-style: none;
+    padding-left: 1rem;
+  }
+
+  #bodyProductos #btnOrder #selectOrden li:hover{
+    color: #dd517e;
+  }
+
+  #bodyProductos #btnCatalogo{
+    display: flex;
+    float: right;
+    margin: 2rem 4rem;
+  }
+
+  #bodyProductos #btnCatalogo #btnOcultar{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    color: black;
+    background-color: rgb(244, 241, 241);
+  }
+
+  #bodyProductos #messages{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  #bodyProductos #messages img{
+    width: 100%;
+  }
+
+  #bodyProductos #messages .formulario{
+    background-color: #dd517e;
+    color: white;
+    padding: 2rem;
+
+  }
+
+
+  #bodyProductos #messages .formulario h2{
+    margin: 1rem 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #bodyProductos #messages .formulario h3{
+    margin: 1rem 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+footer{
+  background-color: rgb(244, 241, 241);
+  color: black;
+  padding: 3rem;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+footer a h3{
+  color: #dd517e;
+  padding: 0.5rem;
+  margin-bottom: 1rem ;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+footer h4, h5{
+  font-size: 0.8rem;
+
+}
